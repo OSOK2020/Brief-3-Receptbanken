@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  
+}
+
+
+/* bara för att visa ta bort sen */
+
+header{
+    border: 2px solid black;
+    height: 20px;
+}
+
+main{
+    border: 2px solid red;
+}
+
+footer{
+    border: 2px solid green;
+}
+
+/* Bas struktur */
+
+body{
+    display: grid;
+    grid-template-rows:auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 5rem;
+}
