@@ -10,7 +10,6 @@
 
 header{
     border: 2px solid black;
-    height: 20px;
 }
 
 main{
@@ -27,6 +26,7 @@ body{
     display: grid;
     grid-template-rows:auto 1fr auto;
     min-height: 100vh;
+    margin: 0;
 }
 
 
