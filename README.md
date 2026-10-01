@@ -8,7 +8,7 @@ Pastarätter:
 
 Soppor:
 - Cowboysoppa
-- Tomatsopppa
+- Tomatsoppa
 
 Grytor:
 - Högrevsgryta
