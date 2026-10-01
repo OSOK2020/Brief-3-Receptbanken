@@ -10,9 +10,22 @@
 <body>
     <header>
         <h1>Receptbanken</h1>
+        <p>Hitta dina favoritrecept</p>
     </header>
     <main>
+        <!---sök/filter kommer senare-->
+        <section class="search-section">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Sök recept..."
+            >
+        </section>
+        <!--Tom listbehållare-->
+        <section id="recipe-list"></section>
 
+        <!--Detaljvy-->
+        <section id="recipe-details" hidden></section>
     </main>
     <footer>
         <p>&copy;Grupp 3C, WEBB26</p>
