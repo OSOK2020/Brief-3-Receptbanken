@@ -29,12 +29,14 @@ body{
     margin: 0;
 }
 
-
-
-
 footer{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 5rem;
+    padding:1rem
+}
+
+.recipeImg {
+    width: 200px;
+    height: auto;
 }
