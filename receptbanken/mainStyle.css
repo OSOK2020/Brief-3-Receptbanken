@@ -49,7 +49,7 @@ footer{
 }
 
 .filter-container button {
-    border: 2px solid black;
+    border: 1px solid grey;
     border-radius: 8px;
     background: #dfe1e5;
     padding-top: 4px;
@@ -60,6 +60,15 @@ footer{
 
 .filter-container button:hover {
     color: #4caf50;
+}
+
+#filter-header {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
 }
 
 /*.filter-container button.active {
