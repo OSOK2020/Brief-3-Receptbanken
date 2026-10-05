@@ -40,3 +40,35 @@ footer{
     width: 200px;
     height: auto;
 }
+
+/* == Filter design === */
+
+.filter-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.filter-container button {
+    border: 1px solid grey;
+    border-radius: 8px;
+    background: #dfe1e5;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.filter-container button:hover {
+    color: #4caf50;
+}
+
+#filter-header {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
