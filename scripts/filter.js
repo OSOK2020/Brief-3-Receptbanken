@@ -39,4 +39,4 @@ function filterByCategory(recept, kategori) {
     document.getElementById("filter-sallad").addEventListener("click", () => {
         const resultat = filterByCategory(recept, "sallad");
         console.log(resultat);
-    })
+    });
