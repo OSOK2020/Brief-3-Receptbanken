@@ -38,3 +38,31 @@ footer{
     justify-content: flex-end;
     height: 5rem;
 }
+
+/* == Filter design == */
+
+.filter-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.filter-container button {
+    border: 2px solid black;
+    border-radius: 8px;
+    background: #dfe1e5;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.filter-container button:hover {
+    color: #4caf50;
+}
+
+/*.filter-container button.active {
+    
+}
+*/
