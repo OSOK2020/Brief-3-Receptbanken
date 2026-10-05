@@ -24,6 +24,5 @@ recipes.forEach(recipe => {
     li.appendChild(title)
     li.appendChild(img)
 
-
     recipeList.append(li)
 });
