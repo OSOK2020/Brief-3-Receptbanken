@@ -29,7 +29,7 @@ export const recipes = [
     {
         id: 2,
         titel: "Lövbiffspasta",
-        imgsrc: "lovbiffgryta.jpg",
+        imgsrc: "lovbiffspasta.jpg",
         categori: [
             "middag",
             "pasta",
