@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="css/detailview-extra.css">
+    <link rel="stylesheet" href="css/detailView.css">
+
+    <script type="module" src="scripts/test.js" defer></script>
+    <script type="module" src="js/search.js"></script>
+    <script type="module" src="js/filter.js"></script>
+    <script type="module" src="js/detailView.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Receptbanken</h1>
+        <p>Hitta dina favoritrecept</p>
+        <nav id="navigation">
+            <a href="index.html">Hem</a>
+            <a href="pages/tips.html">Tipsa oss</a>
+            <a href="pages/chefs.html">Om oss och våra kockar</a>
+            <a href="pages/kontakt.html">Kontakt</a>
+        </nav>
+    </header>
+    <main>
+        <!---sök/filter kommer senare-->
+        <section class="search-section">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Sök recept...">
+        </section>
+
+        <section class="filter-container">
+            <div id="filter-header">
+            <button id="filter-alla">Alla</button>
+            <button id="filter-pasta">Pasta</button>
+            <button id="filter-soppa">Soppa</button>
+            <button id="filter-gryta">Gryta</button>
+            <button id="filter-sallad">Sallad</button>
+            </div>
+        </section>
+        
+        <!--Tom listbehållare-->
+        <ul id="recipe-list"></ul>
+
+        <!--Detaljvy-->
+        <section id="recipe-details" hidden></section>
+    </main>
+    <footer>
+        <p>&copy;Grupp 3C, WEBB26 </p>
+    </footer>
+</body>
+</html>
