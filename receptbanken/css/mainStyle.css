@@ -10,6 +10,9 @@
 
 header{
     border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
@@ -23,14 +26,17 @@ footer{
 
 /* Bas struktur */
 
-body{
+body {
     display: grid;
     grid-template-rows:auto 1fr auto;
     min-height: 100vh;
     margin: 0;
+    background-color: #4caf50;
+    font-size: large;
+    font-family: monospace;
 }
 
-footer{
+footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -76,6 +82,14 @@ footer{
     line-height: 1.5;
 }
 
+#recipe-list li:hover {
+    background-color: aquamarine;
+    cursor: pointer;
+    transform: scale(1);
+    padding: 1rem;
+    transition: all 1s ease;
+}
+
 @media (max-width: 800px) {
     #recipe-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -87,12 +101,35 @@ footer{
         grid-template-columns: 1fr;
     }
 }
+
+
+/* == Search design == */
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#searchInput {
+    border: 3px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
 /* == Filter design === */
+
+#categories-filter {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: large;
+}
 
 .filter-container {
     display: flex;
+    justify-content: center;
     gap: 15px;
-    margin-top: 10px;
     margin-left: 10px;
 }
 
