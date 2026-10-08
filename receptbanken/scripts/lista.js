@@ -9,6 +9,7 @@ export function lista() {
 
     recipes.forEach((recipe) => {
         const item = document.createElement("li");
+        item.id = "recipe" + recipe.id
         item.classList.add("recipeCommon");
 
         const title = document.createElement("h2");

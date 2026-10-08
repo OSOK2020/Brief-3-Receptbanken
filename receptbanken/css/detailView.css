@@ -1,29 +1,17 @@
-/* --- FIL 2: Expanterat kort (.detailView) --- */
-
 .detailView {
     grid-column: span 3;
     grid-row: span 3;
-    
-    display: grid;            /* Ändrar från flex tillbaka till grid i detaljvyn */
+    display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto auto 1fr;
     gap: 2rem;
     font-size: 1.2rem;
     padding: 2rem;
 
-    aspect-ratio: auto;       /* Släpper kvadrat-formen */
-    overflow: auto;           /* Tillåter scroll om innehållet är långt */
-    align-self: stretch;      /* Tar upp hela höjden för sina 2 grid-rader */
-
-
-    /* FIX 1: Lås maxhöjden så att kortet inte trycker ut hela griden */
+    aspect-ratio: auto;
+    overflow: auto;      
+    align-self: stretch;      
     max-height: 60rem; 
-}
-
-/* Återställ rubriken i detailView så att hela texten syns */
-.detailView h3 {
-    white-space: normal;
-    overflow: visible;
 }
 
 .detailView img {
@@ -36,7 +24,7 @@
     
 }
 
-.detailView h3 {
+.detailView h2 {
     grid-column: span 2;
     font-size: 1.5rem;
     display: flex;
@@ -47,7 +35,6 @@
 .ingredientList {
     grid-column: 1;
     width: 100%;
-
     display: flex;
     flex-direction: column;
     gap:0.5rem;
@@ -55,26 +42,16 @@
     padding-bottom: 1rem;
     background-color: aquamarine;
     border-radius: 2rem;
-
     max-height: 100%;
-
 }
 
 .instructionList {
     grid-column: 2;
     grid-row: 2 / span 2;
-
     display: flex;
     flex-direction: column;
     gap:1rem;
     background-color: aquamarine;
     padding: 2rem;
-
     border-radius: 2rem;
-
-}
-
-
-.ingredientList li {
-
 }
