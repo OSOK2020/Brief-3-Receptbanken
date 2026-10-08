@@ -18,6 +18,7 @@ export function getUpdatedRecipes() {
 
 const updatedRecipes = getUpdatedRecipes();
 
+//Export favoriteRecipesBank to search (and perhaps other js-files)
 export function favoriteRecipesBank (recipe) {
     //Add favorites -------------------------------------------|Odia|
     const favoriteRecipe = document.createElement("button");
