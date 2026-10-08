@@ -6,6 +6,7 @@ function getStoredRecipes() {
 };
 
 //Add favorites to each object
+
 export function getUpdatedRecipes() {
     const updateRecipes = getStoredRecipes();
     
