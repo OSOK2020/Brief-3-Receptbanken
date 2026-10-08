@@ -1,11 +1,11 @@
 import { recipes } from "../data/databas.js";
 
-//Add favorites to each object
-
 export function getStoredRecipes() {
     const storedRecipes = JSON.parse(localStorage.getItem("recipes"));
     return storedRecipes
 };
+
+//Add favorites to each object
 
 export function getUpdatedRecipes() {
     const updateRecipes = getStoredRecipes();
@@ -18,7 +18,7 @@ export function getUpdatedRecipes() {
 
 const updatedRecipes = getUpdatedRecipes();
 
-//favoriteREcipesBank is a reusable function
+//favoriteRecipesBank is a reusable function
 export function favoriteRecipesBank (recipe) {
     //Add favorites -------------------------------------------|Odia|
     const favoriteRecipe = document.createElement("button");
