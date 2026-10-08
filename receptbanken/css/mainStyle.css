@@ -86,6 +86,7 @@ footer{
     #recipe-list {
         grid-template-columns: 1fr;
     }
+}
 /* == Filter design === */
 
 .filter-container {
