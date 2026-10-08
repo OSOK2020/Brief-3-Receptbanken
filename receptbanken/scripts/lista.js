@@ -18,6 +18,7 @@ export function getUpdatedRecipes() {
 
 const updatedRecipes = getUpdatedRecipes();
 
+//favoriteREcipesBank is a reusable function
 export function favoriteRecipesBank (recipe) {
     //Add favorites -------------------------------------------|Odia|
     const favoriteRecipe = document.createElement("button");
