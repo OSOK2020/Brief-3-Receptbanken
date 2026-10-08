@@ -1,12 +1,11 @@
 import { recipes } from "../data/databas.js";
 
-//Add favorites to each object
-
-export function getStoredRecipes() {
+function getStoredRecipes() {
     const storedRecipes = JSON.parse(localStorage.getItem("recipes"));
     return storedRecipes
 };
 
+//Add favorites to each object
 export function getUpdatedRecipes() {
     const updateRecipes = getStoredRecipes();
     
