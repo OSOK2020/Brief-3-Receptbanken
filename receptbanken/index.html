@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receptboken</title>
     <link rel="stylesheet" href="css/mainStyle.css">
+    <script type="module" src="scripts/lista.js" defer></script>
     <script type="module" src="scripts/test.js" defer></script>
     <script type="module" src="js/search.js" defer></script>
+    <script type="module" src="js/filter.js" defer></script>
 </head>
 <body>
-    <nav id="navigation">
-        <a href="index.html">Hem</a>
-        <a href="pages/tips.html">Tipsa oss</a>
-        <a href="pages/chefs.html">Om oss och våra kockar</a>
-        <a href="pages/kontakt.html">Kontakt</a>
-    </nav>
+
     <header>
         <h1>Receptbanken</h1>
         <p>Hitta dina favoritrecept</p>
+        <nav id="navigation">
+            <a href="index.html">Hem</a>
+            <a href="pages/tips.html">Tipsa oss</a>
+            <a href="pages/chefs.html">Om oss och våra kockar</a>
+            <a href="pages/kontakt.html">Kontakt</a>
+        </nav>
     </header>
     <main>
         <!---sök/filter kommer senare-->
@@ -25,9 +28,19 @@
             <input 
                 type="text" 
                 id="searchInput" 
-                placeholder="Sök recept..."
-            >
+                placeholder="Sök recept...">
         </section>
+
+        <section class="filter-container">
+            <div id="filter-header">
+            <button id="filter-alla">Alla</button>
+            <button id="filter-pasta">Pasta</button>
+            <button id="filter-soppa">Soppa</button>
+            <button id="filter-gryta">Gryta</button>
+            <button id="filter-sallad">Sallad</button>
+            </div>
+        </section>
+        
         <!--Tom listbehållare-->
         <ul id="recipe-list"></ul>
 
