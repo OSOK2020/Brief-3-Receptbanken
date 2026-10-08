@@ -7,6 +7,8 @@ export const recipes = [
             "middag",
             "pasta"
         ],
+        time:20,
+        difficulty:3,
         ingredients: [
             "400g spaghetti", 
             "4 äggulor", 
@@ -35,6 +37,8 @@ export const recipes = [
             "pasta",
             "nötkött"
         ],
+        time:25,
+        difficulty:1,
         ingredients: [
             "400 g Lövbiff", 
             "Salt och svartpeppar", 
@@ -69,6 +73,8 @@ export const recipes = [
             "soppa",
             "kyckling"
         ],
+        time:25,
+        difficulty:1,
         ingredients: [
             "2st paprikor",
             "2st bakpotatisar á ca 250g",
@@ -99,6 +105,8 @@ export const recipes = [
             "soppa",
             "vegetarisk"
         ],
+        time:20,
+        difficulty:1,
         ingredients: [
             "1 stor gul lök",
             "1 vitlöksklyfta",
@@ -128,6 +136,8 @@ export const recipes = [
             "gryta",
             "nötkött"
         ],
+        time:150,
+        difficulty:4,
         ingredients: [
             "1,2 kg högrev",
             "1 msk smör, att steka i",
@@ -174,6 +184,8 @@ export const recipes = [
             "gryta",
             "nötkött"
         ],
+        time:30,
+        difficulty:2,
         ingredients: [
             "500 g lövbiff",
             "1 gul lök",
@@ -210,6 +222,8 @@ export const recipes = [
             "sallad",
             "kyckling"
         ],
+        time:35,
+        difficulty:3,
         ingredients: [
             "140 g bacon, strimlad",
             "2 romansalladshuvuden",
@@ -244,6 +258,8 @@ export const recipes = [
             "middag",
             "sallad"
         ],
+        time:15,
+        difficulty:1,
         ingredients: [
             "Gemsallad",
             "Gul paprika",

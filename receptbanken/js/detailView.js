@@ -26,6 +26,8 @@ function displayDetails (recipe, li) {
 function addDetails (recipe, li) {
     addIngredient(recipe, li)
     addInstructions(recipe, li)
+    addCategories(recipe, li)
+    addStats(recipe, li)
 }
 
 function addIngredient (recipe, li) {
@@ -54,12 +56,38 @@ function addInstructions(recipe, li) {
     li.appendChild(instructionList)
 }
 
+function addCategories(recipe, li) {
+    const categories = document.createElement("p");
+    categories.textContent = "Kategorier: "
+    categories.textContent += recipe.category.join(", ");
+    categories.classList.add("categoryDetails") 
+
+    li.appendChild(categories)
+}
+
+function addStats(recipe, li) {
+    const statsSection = document.createElement("section");
+
+    const timeSection = document.createElement("p")
+    timeSection.textContent = recipe.time + " min"
+    timeSection.classList.add("timeSection")
+
+    const difficultySection = document.createElement("p")
+    difficultySection.textContent ="Svårighetsgrad: " + recipe.difficulty +"/5"
+    difficultySection.classList.add("difficultySection")
+
+    statsSection.append(timeSection, difficultySection)
+
+    statsSection.classList.add("statsSection")
+
+    li.appendChild(statsSection)
+}
 
 function removeDetails (li) {
     const previousDetail = document.querySelector(".detailView")
     
     if (previousDetail) {
-        const detailsView = previousDetail.querySelectorAll("ul, ol")
+        const detailsView = previousDetail.querySelectorAll("ul, ol, p, section")
         detailsView.forEach(listElement => listElement.remove()) 
         previousDetail.classList.remove("detailView")
     }
