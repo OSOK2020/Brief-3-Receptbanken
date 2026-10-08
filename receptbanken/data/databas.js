@@ -3,7 +3,7 @@ export const recipes = [
         id: 1,
         titel: "spaghetti carbonara",
         imgsrc: "spaghetti-carbonara.jpg",
-        categori: [
+        category: [
             "middag",
             "pasta"
         ],
@@ -30,7 +30,7 @@ export const recipes = [
         id: 2,
         titel: "Lövbiffspasta",
         imgsrc: "lovbiffspasta.jpg",
-        categori: [
+        category: [
             "middag",
             "pasta",
             "nötkött"
@@ -64,7 +64,7 @@ export const recipes = [
         id: 3,
         titel: "Cowboysoppa",
         imgsrc: "cowboysoppa.jpg",
-        categori: [
+        category: [
             "middag",
             "soppa",
             "kyckling"
@@ -94,7 +94,7 @@ export const recipes = [
         id: 4,
         titel: "Tomatsoppa ",
         imgsrc: "tomatsoppa.jpg",
-        categori: [
+        category: [
             "middag",
             "soppa",
             "vegetarisk"
@@ -123,7 +123,7 @@ export const recipes = [
         id: 5,
         titel: "Mustig högrevsgryta",
         imgsrc: "hogrevsgryta.jpg",
-        categori: [
+        category: [
             "middag",
             "gryta",
             "nötkött"
@@ -169,7 +169,7 @@ export const recipes = [
         id: 6,
         titel: "Krämig lövbiffgryta",
         imgsrc: "lovbiffgryta.jpg",
-        categori: [
+        category: [
             "middag",
             "gryta",
             "nötkött"
@@ -205,7 +205,7 @@ export const recipes = [
         id: 7,
         titel: "Caesarsallad",
         imgsrc: "caesarsallad.jpg",
-        categori: [
+        category: [
             "middag",
             "sallad",
             "kyckling"
@@ -240,7 +240,7 @@ export const recipes = [
         id: 8,
         titel: "Ost- och skink sallad",
         imgsrc: "ost--och-skinksallad.jpg",
-        categori: [
+        category: [
             "middag",
             "sallad"
         ],
