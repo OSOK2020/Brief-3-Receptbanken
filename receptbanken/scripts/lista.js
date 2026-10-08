@@ -1,6 +1,6 @@
 import { recipes } from "../data/databas.js";
 
-export function getStoredRecipes() {
+function getStoredRecipes() {
     const storedRecipes = JSON.parse(localStorage.getItem("recipes"));
     return storedRecipes
 };
