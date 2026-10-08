@@ -5,12 +5,14 @@ const recipeList = document.getElementById("recipe-list");
 
 searchElement.addEventListener('input', () => {
 
-    recipeList.innerHTML = ""; //rensa gamla recept
+    recipeList.innerHTML = ""; //rensa gamla recept genom att -
+                               //ta bort allt html-innehåll innanför 
+                               // ul id="recipe-list"></ul>
 
     const searchTerm = searchElement.value.toLowerCase();
 
     const matches = recipes.filter(recipe =>
-        recipe.titel.toLocaleLowerCase().includes(searchTerm)
+        recipe.titel.toLowerCase().includes(searchTerm)
     )
         if (matches.length === 0){
                 const li = document.createElement("li")
