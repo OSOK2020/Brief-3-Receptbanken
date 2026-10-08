@@ -6,8 +6,8 @@
     <title>Receptboken</title>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/mainStyle.css">
-    <!-- <link rel="stylesheet" href="css/detailview-extra.css"> -->
     <link rel="stylesheet" href="css/detailView.css">
+
     <!-- Scripts -->
     <script type="module" src="scripts/lista.js" defer></script>
     <script type="module" src="js/search.js" defer></script>
@@ -15,10 +15,11 @@
     <script type="module" src="js/detailView.js"></script>
 </head>
 <body>
-
     <header>
-        <h1>Receptbanken</h1>
-        <p>Hitta dina favoritrecept</p>
+        <div class="logo">
+            <h1>Receptbanken</h1>
+            <p>Hitta dina favoritrecept</p>
+        </div>
         <nav id="navigation">
             <a href="index.html">Hem</a>
             <a href="pages/tips.html">Tipsa oss</a>
@@ -28,28 +29,28 @@
     </header>
     <main>
         <!---sök/filter kommer senare-->
-        <section class="search-section">
-            <input 
-                type="text" 
-                id="searchInput" 
-                placeholder="Sök recept...">
-        </section>
-        <p id="categories-filter">Kategorier</p>
-        <section class="filter-container">
-            <div id="filter-header">
-            <button id="filter-alla">Alla</button>
-            <button id="filter-pasta">Pasta</button>
-            <button id="filter-soppa">Soppa</button>
-            <button id="filter-gryta">Gryta</button>
-            <button id="filter-sallad">Sallad</button>
-            </div>
+        <section class="filteringSection">
+            <section class="search-section">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Sök recept...">
+            </section>
+            <section class="filter-section">
+                <p id="categories-filter">Kategorier</p>
+                <section class="filter-container">
+                    <button id="filter-alla">Alla</button>
+                    <button id="filter-pasta">Pasta</button>
+                    <button id="filter-soppa">Soppa</button>
+                    <button id="filter-gryta">Gryta</button>
+                    <button id="filter-sallad">Sallad</button>
+                </section>
+            </section>
         </section>
         
         <!--Tom listbehållare-->
         <ul id="recipe-list"></ul>
 
-        <!--Detaljvy-->
-        <section id="recipe-details" hidden></section>
     </main>
     <footer>
         <p>&copy;Grupp 3C, WEBB26 </p>
