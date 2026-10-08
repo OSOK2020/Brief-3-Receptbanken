@@ -12,8 +12,9 @@ header{
     border: 2px solid black;
 }
 
-main{
-    border: 2px solid red;
+main {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto 2rem;
 }
 
 footer{
@@ -39,4 +40,50 @@ footer{
 .recipeImg {
     width: 200px;
     height: auto;
+}
+
+#recipe-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.recipeCommon {
+    overflow: hidden;
+    border: 1px solid #d6dfd6;
+    border-radius: 8px;
+    background: white;
+}
+
+.recipeImg {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.recipeCommon h2,
+.recipeCommon p {
+    margin: 1rem;
+}
+
+.recipeCommon h2 {
+    margin-bottom: 0.5rem;
+}
+
+.recipeCommon p {
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+    #recipe-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    #recipe-list {
+        grid-template-columns: 1fr;
+    }
 }
