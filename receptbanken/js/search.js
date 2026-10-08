@@ -1,7 +1,10 @@
-import { recipes } from "../data/databas.js";
+import { getUpdatedRecipes, favoriteRecipesBank } from "../scripts/lista.js";
 
 const searchElement = document.getElementById("searchInput");
 const recipeList = document.getElementById("recipe-list");
+
+// //Add favorites to each object
+const updatedRecipes = getUpdatedRecipes();
 
 searchElement.addEventListener('input', () => {
 
@@ -11,7 +14,7 @@ searchElement.addEventListener('input', () => {
 
     const searchTerm = searchElement.value.toLowerCase();
 
-    const matches = recipes.filter(recipe =>
+    const matches = updatedRecipes.filter(recipe =>
         recipe.titel.toLowerCase().includes(searchTerm)
     )
         if (matches.length === 0){
@@ -33,7 +36,11 @@ searchElement.addEventListener('input', () => {
             img.alt = "En bild på " + recipe.titel
             img.classList.add("recipeImg")
             
-            li.append(title, img)
+            //Add favorites -------------------------------------------|Odia|
+            //Render out the favoriteRecipesBank
+            const myFavorites = favoriteRecipesBank(recipe);
+
+            li.append(title, img, myFavorites)
             
             recipeList.appendChild(li)
         });
