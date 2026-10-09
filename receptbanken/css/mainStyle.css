@@ -123,14 +123,14 @@ footer {
     font-size: large;
 }
 
-.filter-container {
+#filter-container {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-left: 10px;
 }
 
-.filter-container button {
+#filter-container button {
     border: 1px solid grey;
     border-radius: 8px;
     background: #dfe1e5;
@@ -140,7 +140,7 @@ footer {
     padding-right: 8px;
 }
 
-.filter-container button:hover {
+#filter-container button:hover {
     color: #4caf50;
 }
 

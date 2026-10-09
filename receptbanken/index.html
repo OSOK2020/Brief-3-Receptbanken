@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
     <script type="module" src="js/filter.js" defer></script>
     <script type="module" src="js/detailView.js" defer></script>
 </head>
+
 <body>
 
     <header>
@@ -30,22 +32,19 @@
     <main>
         <!---sök/filter kommer senare-->
         <section class="search-section">
-            <input 
-                type="text" 
-                id="searchInput" 
-                placeholder="Sök recept...">
+            <input type="text" id="searchInput" placeholder="Sök recept...">
         </section>
         <p id="categories-filter">Kategorier</p>
-        <section class="filter-container">
+        <section id="filter-container">
             <div id="filter-header">
-            <button id="filter-alla">Alla</button>
-            <button id="filter-pasta">Pasta</button>
-            <button id="filter-soppa">Soppa</button>
-            <button id="filter-gryta">Gryta</button>
-            <button id="filter-sallad">Sallad</button>
+                <button id="alla">Alla</button>
+                <button id="pasta">Pasta</button>
+                <button id="soppa">Soppa</button>
+                <button id="gryta">Gryta</button>
+                <button id="sallad">Sallad</button>
             </div>
         </section>
-        
+
         <!--Tom listbehållare-->
         <ul id="recipe-list"></ul>
 
@@ -56,4 +55,5 @@
         <p>&copy;Grupp 3C, WEBB26 </p>
     </footer>
 </body>
+
 </html>
