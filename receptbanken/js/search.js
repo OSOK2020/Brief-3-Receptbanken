@@ -1,10 +1,10 @@
-import { getUpdatedRecipes, favoriteRecipesBank } from "../scripts/lista.js";
+import { updateRecipes, favoriteRecipesBank } from "../scripts/lista.js";
 
 const searchElement = document.getElementById("searchInput");
 const recipeList = document.getElementById("recipe-list");
 
 // //Add favorites to each object
-const updatedRecipes = getUpdatedRecipes();
+const updatedRecipes = updateRecipes();
 
 searchElement.addEventListener('input', () => {
 
