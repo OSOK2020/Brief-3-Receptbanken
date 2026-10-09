@@ -281,5 +281,259 @@ export const recipes = [
             "Blanda allt och strö över tärnad ost. Servera med dressingen."
         ]
     },
-    
+    {
+        id: 9,
+        titel: "Köttbullar med gräddsås",
+        imgsrc: "kottbullar-med-graddsas.jpg",
+        category: [
+            "middag",
+            "nötkött"
+        ],
+        time: 40,
+        difficulty: 2,
+        ingredients: [
+            "500 g blandfärs",
+            "0.5 dl ströbröd",
+            "1 dl mjölk",
+            "1 gul lök, finhackad",
+            "1 ägg",
+            "1 tsk salt",
+            "1 krm kryddpeppar",
+            "2 msk smör till stekning",
+            "2 dl vispgrädde",
+            "2 dl köttbuljong",
+            "1 msk soyasås",
+            "1 msk majsstärkelse"
+        ],
+        instructions: [
+            "Blanda ströbröd och mjölk i en skål. Låt svälla i ca 5 minuter.",
+            "Bryn den finhackade löken i lite smör tills den blir mjuk.",
+            "Blanda färs, ägg, lök, salt, kryddpeppar och ströbrödsblandningen till en jämn smet.",
+            "Forma smeten till jämna köttbullar med fuktiga händer.",
+            "Stek köttbullarna i smör på medelhög värme tills de fått fin färg och är genomstekta.",
+            "Ta ur köttbullarna ur pannan. Häll i buljong, grädde och soja i samma panna och koka upp.",
+            "Red av såsen med majsstärkelse utrörd i lite vatten och smaka av med salt och peppar.",
+            "Servera med kokt potatis, pressgurka och rårörda lingon."
+        ]
+    },
+    {
+        id: 10,
+        titel: "Krämig kycklinggryta",
+        imgsrc: "kramig-kycklinggryta.jpg",
+        category: [
+            "middag",
+            "gryta",
+            "kyckling"
+        ],
+        time: 30,
+        difficulty: 2,
+        ingredients: [
+            "500 g kycklingfilé",
+            "1 gul lök",
+            "1 röd paprika",
+            "1 msk gul curry",
+            "1 vitlöksklyfta",
+            "2.5 dl matlagningsgrädde",
+            "2 dl crème fraiche",
+            "1 msk kycklingfond",
+            "1 msk smör till stekning",
+            "salt och peppar"
+        ],
+        instructions: [
+            "Skär kycklingen i munsbitsstora tärningar. Hacka löken och strimla paprikan.",
+            "Hetta upp smör i en panna och fräs curry och pressad vitlök kort.",
+            "Tillsätt kycklingen och bryn tills den fått fin yta.",
+            "Lägg i lök och paprika och låt fräsa med i några minuter.",
+            "Häll på matlagningsgrädde, crème fraiche och kycklingfond. Låt puttra under lock i ca 10 minuter.",
+            "Smaka av med salt och peppar och servera med ris."
+        ]
+    },
+    {
+        id: 11,
+        titel: "Vegetarisk pesto-pasta",
+        imgsrc: "vegetarisk-pesto-pasta.jpg",
+        category: [
+            "middag",
+            "pasta",
+            "vegetarisk"
+        ],
+        time: 15,
+        difficulty: 1,
+        ingredients: [
+            "350 g pasta penne",
+            "1 burk grön pesto (140 g)",
+            "250 g körsbärstomater",
+            "1 förp mozarrella (125 g)",
+            "0.5 dl pinjenötter",
+            "färsk basilika",
+            "salt och svartpeppar"
+        ],
+        instructions: [
+            "Koka pastan i rikligt med saltat vatten enligt anvisning på förpackningen.",
+            "Rosta pinjenötterna snabbt i en torr, het stekpanna tills de får fin färg.",
+            "Halvera körsbärstomaterna och skär mozzarellan i mindre bitar.",
+            "Häll av pastan och blanda direkt med peston.",
+            "Vänd ner tomater och mozzarella. Toppa med rostade pinjenötter och färsk basilika."
+        ]
+    },
+    {
+        id: 12,
+        titel: "Chili con carne",
+        imgsrc: "chili-con-carne.jpg",
+        category: [
+            "middag",
+            "gryta",
+            "nötkött"
+        ],
+        time: 45,
+        difficulty: 2,
+        ingredients: [
+            "500 g nötfärs",
+            "1 gul lök",
+            "2 vitlöksklyftor",
+            "1 röd paprika",
+            "1 msk chilipulver",
+            "1 tsk spiskummin",
+            "1 förp krossade tomater (400 g)",
+            "1 förp röda bönor (400 g)",
+            "2 msk tomatpuré",
+            "1 tärning köttbuljong",
+            "salt och svartpeppar"
+        ],
+        instructions: [
+            "Skala och hacka lök och vitlök. Tärna paprikan.",
+            "Bryn nötfärsen i en stor gryta tills den är genomstekt.",
+            "Tillsätt lök, vitlök, paprika, chilipulver och spiskummin. Låt fräsa med i ett par minuter.",
+            "Rör ner tomatpuré, krossade tomater och smulad köttbuljong.",
+            "Låt grytan småkoka på låg värme i minst 20 minuter.",
+            "Skölj bönorna och rör ner dem i grytan. Låt bli varmt i ca 5 minuter.",
+            "Smaka av med salt och peppar. Servera med ris och en klick gräddfil."
+        ]
+    },
+    {
+        id: 13,
+        titel: "Vegetarisk lasagne",
+        imgsrc: "vegetarisk-lasagne.jpg",
+        category: [
+            "middag",
+            "pasta",
+            "vegetarisk"
+        ],
+        time: 60,
+        difficulty: 3,
+        ingredients: [
+            "12 lasagneplattor",
+            "1 zucchini",
+            "250 g färska champinjoner",
+            "1 förp krossade tomater (400 g)",
+            "2 msk tomatpuré",
+            "1 gul lök",
+            "2 vitlöksklyftor",
+            "1 tsk torkad basilika",
+            "500 g keso",
+            "2 dl riven ost",
+            "salt och peppar"
+        ],
+        instructions: [
+            "Sätt ugnen på 200°C.",
+            "Hacka lök och vitlök. Skiva champinjoner och tärna zucchinin.",
+            "Fräs lök, vitlök och svamp i olja. Tillsätt zucchini, tomatpuré, krossade tomater och basilika. Låt koka 10 min. Smaka av med salt och peppar.",
+            "Varva tomatsås, keso och lasagneplattor i en smord ugnsform.",
+            "Avsluta med ett lager tomatsås och strö över den rivna osten.",
+            "Grädda i mitten av ugnen i ca 30-35 minuter tills lasagnen fått fin färg."
+        ]
+    },
+    {
+        id: 14,
+        titel: "Krämig kycklingsoppa",
+        imgsrc: "kycklingsoppa.jpg",
+        category: [
+            "middag",
+            "soppa",
+            "kyckling"
+        ],
+        time: 30,
+        difficulty: 1,
+        ingredients: [
+            "400 g kycklingfilé",
+            "2 morötter",
+            "1 palsternacka",
+            "1 gul lök",
+            "2 vitlöksklyftor",
+            "8 dl kycklingbuljong",
+            "2 dl vispgrädde",
+            "1 tsk torkad timjan",
+            "1 msk smör",
+            "salt och peppar"
+        ],
+        instructions: [
+            "Strimla kycklingen. Skala och slanta morötter och palsternacka. Hacka löken och vitlöken.",
+            "Fräs lök, vitlök och kyckling i smör i en gryta tills kycklingen får yta.",
+            "Tillsätt morötter, palsternacka, timjan och kycklingbuljong. Koka upp och låt sjuda i ca 15 minuter.",
+            "Rör ner grädden och låt soppan bli varm.",
+            "Smaka av med salt och svartpeppar och servera med ett gott bröd."
+        ]
+    },
+    {
+        id: 15,
+        titel: "Grekisk sallad",
+        imgsrc: "grekisk-sallad.jpg",
+        category: [
+            "middag",
+            "sallad",
+            "vegetarisk"
+        ],
+        time: 15,
+        difficulty: 1,
+        ingredients: [
+            "4 st färska tomater",
+            "1 gurka",
+            "1 rödlök",
+            "100 g kalamataoliver",
+            "150 g fetaost",
+            "0.5 dl olivolja",
+            "2 msk rödvinsvinäger",
+            "1 tsk torkad oregano",
+            "salt och svartpeppar"
+        ],
+        instructions: [
+            "Skär tomaterna i grova klyftor och skiva gurkan.",
+            "Skala och skiva rödlöken i tunna ringar.",
+            "Blanda tomater, gurka, rödlök och oliver i en stor skål.",
+            "Blanda ihop olivolja, vinäger, oregano, salt och peppar till en dressing och häll över salladen.",
+            "Smula eller tärna fetaosten och lägg överst innan servering."
+        ]
+    },
+    {
+        id: 16,
+        titel: "Spaghetti och köttfärssås",
+        imgsrc: "spaghetti-kottfarssas.jpg",
+        category: [
+            "middag",
+            "pasta",
+            "nötkött"
+        ],
+        time: 35,
+        difficulty: 1,
+        ingredients: [
+            "500 g nötfärs",
+            "400 g spaghetti",
+            "1 gul lök",
+            "2 vitlöksklyftor",
+            "2 msk tomatpuré",
+            "1 förp krossade tomater (400 g)",
+            "1 tärning köttbuljong",
+            "1 tsk torkad oregano",
+            "1 msk smör eller olja",
+            "salt och peppar"
+        ],
+        instructions: [
+            "Skala och finhacka lök och vitlök.",
+            "Hetta upp smör i en panna och bryn nötfärsen tillsammans med löken.",
+            "Rör ner tomatpuré, krossade tomater, smulad buljongtärning och oregano.",
+            "Låt köttfärssåsen puttra på svag värme i ca 15–20 minuter. Smaka av med salt och peppar.",
+            "Koka spaghettin enligt anvisningen på förpackningen.",
+            "Servera spaghettin toppad med köttfärssåsen och eventuellt lite riven ost."
+        ]
+    }    
 ];
