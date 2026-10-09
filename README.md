@@ -10,3 +10,5 @@
 ## AI (om tillämpligt)
 Kort beskrivning av AI-användning.
 
+AI har använts för att skapa recept 9-16
+
