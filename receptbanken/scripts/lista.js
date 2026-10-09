@@ -44,7 +44,7 @@ export function saveFavorites(recipesArray) {
 }
 
 
-//Export favoriteRecipesBank to search (and perhaps other js-files)
+//Export favoriteRecipesBank to search.js, favorites.js (and perhaps other js-files)
 export function favoriteRecipesBank (recipe, recipesArray) {
     //Add favorites -------------------------------------------|Odia|
     const favoriteRecipe = document.createElement("button");
