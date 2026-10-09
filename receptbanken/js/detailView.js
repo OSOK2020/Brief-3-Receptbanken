@@ -19,15 +19,25 @@ function displayDetails (recipe, li) {
     if(!sameLI){
         li.classList.add("detailView")
         scrollTo(li)
-        addDetails(recipe, li)
+        const isLong = addDetails(recipe, li)
+        console.log("isLong", isLong)
+        if (isLong) {
+            li.classList.add("detailViewLong")
+        }
     }
 }
 
 function addDetails (recipe, li) {
-    addIngredient(recipe, li)
-    addInstructions(recipe, li)
+    const ingredientCount = addIngredient(recipe, li)
+    const instructionCount = addInstructions(recipe, li)
     addCategories(recipe, li)
     addStats(recipe, li)
+
+    if (ingredientCount > 12 || instructionCount > 10) {
+        return true
+    } else {
+        return false
+    }
 }
 
 function addIngredient (recipe, li) {
@@ -39,8 +49,9 @@ function addIngredient (recipe, li) {
         ingredient.textContent = ingredientTxt
         ingredientList.appendChild(ingredient)
     });
-
     li.appendChild(ingredientList)
+    console.log("ingredient count", ingredientList.children.length)
+    return ingredientList.children.length
 }
 
 function addInstructions(recipe, li) {
@@ -54,6 +65,9 @@ function addInstructions(recipe, li) {
     });
 
     li.appendChild(instructionList)
+    console.log("instruction count", instructionList.children.length)
+    return instructionList.children.length
+
 }
 
 function addCategories(recipe, li) {
@@ -89,7 +103,7 @@ function removeDetails (li) {
     if (previousDetail) {
         const detailsView = previousDetail.querySelectorAll("ul, ol, p, section")
         detailsView.forEach(listElement => listElement.remove()) 
-        previousDetail.classList.remove("detailView")
+        previousDetail.className = "recipeCommon"
     }
      return li === previousDetail
 }
