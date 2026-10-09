@@ -15,9 +15,10 @@ searchElement.addEventListener('input', () => {
         recipe.titel.toLowerCase().includes(searchTerm)
     )
         if (matches.length === 0){
-                const li = document.createElement("li")
-                li.textContent = "No such recipe"
-                recipeList.appendChild(li)
+                const p = document.createElement("p")
+                p.textContent = "Inga recept matchar sökning"
+                p.classList.add("noSearchResult")
+                recipeList.appendChild(p)
                 return;
         }
         matches.forEach(recipe => {
@@ -25,7 +26,7 @@ searchElement.addEventListener('input', () => {
             li.id = "recipe" + recipe.id 
             li.classList.add("recipeCommon")
 
-            const title = document.createElement("h3")
+            const title = document.createElement("h2")
             title.textContent = recipe.titel
             
             const img = document.createElement("img")
@@ -33,7 +34,7 @@ searchElement.addEventListener('input', () => {
             img.alt = "En bild på " + recipe.titel
             img.classList.add("recipeImg")
             
-            li.append(title, img)
+            li.append(img, title)
             
             recipeList.appendChild(li)
         });
