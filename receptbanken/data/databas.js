@@ -265,5 +265,4 @@ export const recipes = [
             "Blanda allt och strö över tärnad ost. Servera med dressingen."
         ]
     },
-    
 ];

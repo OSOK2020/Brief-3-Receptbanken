@@ -1,64 +1,76 @@
 import { recipes } from "../data/databas.js";
 
-function getStoredRecipes() {
-    const storedRecipes = JSON.parse(localStorage.getItem("recipes"));
-    return storedRecipes
-};
+const isFavoritesPage =
+    window.location.pathname.includes("favorites");
+    
+const imagePath = isFavoritesPage ? "../data/img/" : "data/img/";
 
 //Add favorites to each object
 
-export function getUpdatedRecipes() {
-    const updateRecipes = getStoredRecipes();
-    
-    return updateRecipes || recipes.map(recipe => ({
+export function updateRecipes() {
+    //Get favorites and if null then empty array...
+    const myFavorites =
+        JSON.parse(localStorage.getItem("favorites")) || [];
+
+    console.log(myFavorites)
+    return recipes.map(recipe => ({
         ...recipe,
-        favorite: false
+        favorite: myFavorites.some(
+            favorite => favorite.id === recipe.id 
+        )
     }));
 }
+console.log(updateRecipes())
 
-const updatedRecipes = getUpdatedRecipes();
+export function saveFavorites(recipesArray) {
+    
+    //Filter on favorite from the updatedRecipes-database 
+        // with only id and favorite saved
+        const favoriteRecipes = recipesArray.filter(
+            recipe => recipe.favorite === true)
+        .map(recipe => ({
+            id: recipe.id, 
+            favorite: recipe.favorite
+                        }));
+        console.log("Ska sparas:", favoriteRecipes)
+
+        //Save them as favorites to the localStorage 
+        localStorage.setItem(
+            "favorites",
+            JSON.stringify(favoriteRecipes)
+        );
+        
+        return favoriteRecipes
+}
+
 
 //Export favoriteRecipesBank to search (and perhaps other js-files)
-export function favoriteRecipesBank (recipe) {
+export function favoriteRecipesBank (recipe, recipesArray) {
     //Add favorites -------------------------------------------|Odia|
     const favoriteRecipe = document.createElement("button");
-    const myFavorites = JSON.parse(localStorage.getItem("favorites")) || []; //If
     
-    //Check if id in localstorage "favorites" matches the database (true/false)
-    const isFavorite = myFavorites.some(
-        favorite => favorite.id === recipe.id
-    );
-
-    console.log(isFavorite)
     //If there is no match:
-    if (!isFavorite) {
+    if (!recipe.favorite) {
         favoriteRecipe.textContent = `Spara som favorit`;
     //If there is a match:
     } else {
-        favoriteRecipe.textContent = `Spara som favorit ⭐`
-    }
+        favoriteRecipe.textContent = `Sparad som favorit ⭐`
+    };
 
-    //One click changes the attribute of the button between favorite and not
+    //One click changes the attribute of the button between favorite and not favorite
     favoriteRecipe.addEventListener("click", () => {
+        
         recipe.favorite = !recipe.favorite;
 
         if (recipe.favorite){
             favoriteRecipe.textContent = `Sparad som favorit ⭐`;
         } else {
             favoriteRecipe.textContent = `Spara som favorit`; 
-        }
-
-        //Filter on favorite from the updatedRecipes-database
-        const favoriteRecipes = updateRecipes.filter(recipe => recipe.favorite);
-        
-        //Save them as favorites to the localStorage
-        localStorage.setItem(
-            "favorites",
-            JSON.stringify(favoriteRecipes)
-        );
+        };
+        //Save the current version of rece
+        saveFavorites(recipesArray)
     });
-
-    return favoriteRecipe
+ return favoriteRecipe;
 }
 
 export function lista() {
@@ -67,6 +79,8 @@ export function lista() {
     if (!recipeList) return;
 
     recipeList.replaceChildren();
+    
+    const updatedRecipes = updateRecipes();
 
     updatedRecipes.forEach((recipe) => {
         const item = document.createElement("li");
@@ -77,18 +91,16 @@ export function lista() {
         title.textContent = recipe.titel;
 
         const img = document.createElement("img");
-        img.src = `data/img/${recipe.imgsrc}`;
+        img.src = imagePath + recipe.imgsrc;
         img.alt = `Bild på ${recipe.titel}`;
         img.classList.add("recipeImg");
         
         //Render out the favoriteRecipesBank
-        const myFavorites = favoriteRecipesBank(recipe);
+        const myFavorites = favoriteRecipesBank(recipe, updatedRecipes);
 
         item.append(img, title, myFavorites);
         recipeList.append(item);
     });
 }
-
-console.log(JSON.parse(localStorage.getItem("favorites")));
 
 lista();
