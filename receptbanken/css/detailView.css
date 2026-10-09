@@ -97,3 +97,8 @@
 .statsSection * {
     margin: 0;
 }
+
+.detailView .faveStatus{
+    right: unset;
+    left: 1rem;
+}

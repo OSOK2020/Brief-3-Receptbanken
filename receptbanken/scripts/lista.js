@@ -47,25 +47,24 @@ export function saveFavorites(recipesArray) {
 //Export favoriteRecipesBank to search (and perhaps other js-files)
 export function favoriteRecipesBank (recipe, recipesArray) {
     //Add favorites -------------------------------------------|Odia|
-    const favoriteRecipe = document.createElement("button");
-    
+    const favoriteRecipe = document.createElement("img");
+    favoriteRecipe.classList.add("faveStatus")
     //If there is no match:
     if (!recipe.favorite) {
-        favoriteRecipe.textContent = `Spara som favorit`;
+        favoriteRecipe.src = "/receptbanken/data/img/nonFave.png";
     //If there is a match:
     } else {
-        favoriteRecipe.textContent = `Sparad som favorit ⭐`
+        favoriteRecipe.src = "/receptbanken/data/img/fave.png";
     };
 
     //One click changes the attribute of the button between favorite and not favorite
     favoriteRecipe.addEventListener("click", () => {
-        
         recipe.favorite = !recipe.favorite;
 
         if (recipe.favorite){
-            favoriteRecipe.textContent = `Sparad som favorit ⭐`;
+            favoriteRecipe.src = "/receptbanken/data/img/fave.png";
         } else {
-            favoriteRecipe.textContent = `Spara som favorit`; 
+            favoriteRecipe.src = "/receptbanken/data/img/nonFave.png"; 
         };
         //Save the current version of rece
         saveFavorites(recipesArray)

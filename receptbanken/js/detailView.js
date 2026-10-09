@@ -3,6 +3,10 @@ import { recipes } from "../data/databas.js";
 const recipeList = document.getElementById("recipe-list")
 
 recipeList.addEventListener("click", (e) => {
+    
+    if (e.target.matches(".faveStatus")) {
+        return
+    }
     const li = e.target.closest("li.recipeCommon")
 
     if (li && recipeList.contains(li)) {

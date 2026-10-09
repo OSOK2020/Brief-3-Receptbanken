@@ -157,6 +157,7 @@ main {
     background-color: var(--bg-card);
     transition: background-color 0.4s ease;
     aspect-ratio: 5 / 4;
+    position:relative;
 }
 
 .recipeCommon:hover {
@@ -179,9 +180,17 @@ main {
 
 
 .noSearchResult {
-    
     font-size: 1.2rem;
     margin: 1rem;
+
+}
+
+.faveStatus {
+    width: 2rem;
+    position: absolute;
+    top: 1rem;
+    z-index: 2;
+    right: 1rem;
 }
 
 
