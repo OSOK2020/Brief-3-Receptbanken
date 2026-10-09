@@ -1,5 +1,9 @@
 import { recipes } from "../data/databas.js";
 
+const isFavoritesPage =
+    window.location.pathname.includes("favorites");
+    
+const imagePath = isFavoritesPage ? "../data/img/" : "data/img/";
 
 //Add favorites to each object
 
@@ -63,7 +67,7 @@ export function favoriteRecipesBank (recipe, recipesArray) {
         } else {
             favoriteRecipe.textContent = `Spara som favorit`; 
         };
-
+        //Save the current version of rece
         saveFavorites(recipesArray)
     });
  return favoriteRecipe;
@@ -87,7 +91,7 @@ export function lista() {
         title.textContent = recipe.titel;
 
         const img = document.createElement("img");
-        img.src = `data/img/${recipe.imgsrc}`;
+        img.src = imagePath + recipe.imgsrc;
         img.alt = `Bild på ${recipe.titel}`;
         img.classList.add("recipeImg");
         

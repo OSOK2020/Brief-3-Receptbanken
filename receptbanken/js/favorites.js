@@ -1,6 +1,11 @@
 //Favorites markings
 import { updateRecipes, favoriteRecipesBank } from "../scripts/lista.js";
 
+const isFavoritesPage =
+    window.location.pathname.includes("favorites");
+    
+const imagePath = isFavoritesPage ? "../data/img/" : "data/img/";
+
 function favoriteList() {
     const recipeList = document.getElementById("recipe-list");
 
@@ -19,7 +24,7 @@ function favoriteList() {
         title.textContent = favored.titel;
 
         const img = document.createElement("img");
-        img.src = `../data/img/${favored.imgsrc}`;
+        img.src = imagePath + favored.imgsrc;
         console.log(img.src)
         img.alt = `Bild på ${favored.titel}`;
         img.classList.add("recipeImg");
