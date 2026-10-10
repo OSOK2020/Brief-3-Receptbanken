@@ -133,7 +133,7 @@ main {
 
 /* == Filter design === */
 
-.filter-section {
+#filter-section {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -147,7 +147,7 @@ main {
     margin: 0;
 }
 
-.filter-container {
+#kategorier {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -231,13 +231,13 @@ main {
 
 /* == Filter design === */
 
-.filter-section {
+#filter-header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-#categories-filter {
+#kategorier {
     display: flex;
     justify-content: center;
     font-weight: bold;
@@ -245,24 +245,14 @@ main {
     margin: 0;
 }
 
-.filter-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-left: 10px;
-    border: 1px solid black;
-    border-radius: 30px;
-    padding: 10px 25px;
-}
-
-.filter-container button {
+#kategorier button {
     border: 1px solid grey;
     border-radius: 8px;
     background: #dfe1e5;
     padding: 4px 8px;
 }
 
-.filter-container button:hover {
+#kategorier button:hover {
     color: #4caf50;
 }
 
@@ -331,41 +321,3 @@ main {
     }
 }
 
-/* == Filter design === */
-
-#categories-filter {
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    font-size: large;
-}
-
-#filter-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-left: 10px;
-}
-
-#filter-container button {
-    border: 1px solid grey;
-    border-radius: 8px;
-    background: #dfe1e5;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-#filter-container button:hover {
-    color: #4caf50;
-}
-
-#filter-header {
-    border: 1px solid black;
-    border-radius: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 25px;
-    padding-left: 25px;
-}
