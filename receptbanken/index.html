@@ -36,15 +36,19 @@
             <input type="text" id="searchInput" placeholder="Sök recept...">
         </section>
         <p id="categories-filter">Kategorier</p>
-        <section id="filter-container">
-            <div id="filter-header">
-                <button id="alla">Alla</button>
-                <button id="pasta">Pasta</button>
-                <button id="soppa">Soppa</button>
-                <button id="gryta">Gryta</button>
-                <button id="sallad">Sallad</button>
+        <div id="filter-header">
+
+            <div id="kategorier">
+                <button class="filter-knapp" data-kategori="alla">Alla recept</button>
+                <button class="filter-knapp" data-kategori="pasta">Pasta</button>
+                <button class="filter-knapp" data-kategori="soppa">Soppa</button>
+                <button class="filter-knapp" data-kategori="gryta">Gryta</button>
+                <button class="filter-knapp" data-kategori="sallad">Sallad</button>
             </div>
-        </section>
+
+            <div id="lista"></div>
+
+        </div>
 
         <!--Tom listbehållare-->
         <ul id="recipe-list"></ul>
