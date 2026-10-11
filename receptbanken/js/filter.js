@@ -1,42 +1,36 @@
-// Filter funktion
 
-const recept = [
-    { namn: "Spaghetti carbonara", kategori: "pasta" },
-    { namn: "Lövbiffspasta", kategori: "pasta" },
-    { namn: "Cowboysoppa", kategori: "soppa" },
-    { namn: "Tomatsoppa", kategori: "soppa" },
-    { namn: "Högrevsgryta", kategori: "gryta" },
-    { namn: "Lövbiffsgryta", kategori: "gryta" },
-    { namn: "Ceasarsallad", kategori: "sallad" },
-    { namn: "Ost och skinksallad", kategori: "sallad" },
-];
 
-function filterByCategory(recept, kategori) {
-    if (kategori === "alla") return recept;
-    return recept.filter(recept => recept.kategori === kategori);
+import { recipes } from "../data/databas.js";
 
-}
-    document.getElementById("filter-alla").addEventListener("click", () => {
-        const resultat = filterByCategory(recept, "alla");
-        console.log(resultat);
+const recipeList = document.getElementById("recipe-list");
+const filterButtons = document.querySelectorAll(".filter-knapp");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const selectedCategory = button.dataset.kategori;
+
+        const recipeCards = recipeList.querySelectorAll("li.recipeCommon");
+
+        recipeCards.forEach(card => {
+            const recipeId = card.id.replace("recipe", "");
+
+            const recipe = recipes.find(
+                r => String(r.id) === recipeId
+            );
+
+            if (!recipe) return;
+
+            const categories = Array.isArray(recipe.category)
+                ? recipe.category
+                : [recipe.category];
+
+            const matchesCategory =
+                selectedCategory === "alla" ||
+                categories.some(category =>
+                    String(category).toLowerCase() === selectedCategory
+                );
+
+            card.hidden = !matchesCategory;
+        });
     });
-
-    document.getElementById("filter-pasta").addEventListener("click", () => {
-        const resultat = filterByCategory(recept, "pasta");
-        console.log(resultat);
-    });
-
-    document.getElementById("filter-soppa").addEventListener("click", () => {
-        const resultat = filterByCategory(recept, "soppa");
-        console.log(resultat);
-    });
-
-    document.getElementById("filter-gryta").addEventListener("click", () => {
-        const resultat = filterByCategory(recept, "gryta");
-        console.log(resultat);
-    });
-
-    document.getElementById("filter-sallad").addEventListener("click", () => {
-        const resultat = filterByCategory(recept, "sallad");
-        console.log(resultat);
-    });
+});

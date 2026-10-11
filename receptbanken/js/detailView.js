@@ -3,6 +3,10 @@ import { recipes } from "../data/databas.js";
 const recipeList = document.getElementById("recipe-list")
 
 recipeList.addEventListener("click", (e) => {
+    
+    if (e.target.matches(".faveStatus")) {
+        return
+    }
     const li = e.target.closest("li.recipeCommon")
 
     if (li && recipeList.contains(li)) {
@@ -19,13 +23,25 @@ function displayDetails (recipe, li) {
     if(!sameLI){
         li.classList.add("detailView")
         scrollTo(li)
-        addDetails(recipe, li)
+        const isLong = addDetails(recipe, li)
+        console.log("isLong", isLong)
+        if (isLong) {
+            li.classList.add("detailViewLong")
+        }
     }
 }
 
 function addDetails (recipe, li) {
-    addIngredient(recipe, li)
-    addInstructions(recipe, li)
+    const ingredientCount = addIngredient(recipe, li)
+    const instructionCount = addInstructions(recipe, li)
+    addCategories(recipe, li)
+    addStats(recipe, li)
+
+    if (ingredientCount > 12 || instructionCount > 10) {
+        return true
+    } else {
+        return false
+    }
 }
 
 function addIngredient (recipe, li) {
@@ -37,8 +53,9 @@ function addIngredient (recipe, li) {
         ingredient.textContent = ingredientTxt
         ingredientList.appendChild(ingredient)
     });
-
     li.appendChild(ingredientList)
+    console.log("ingredient count", ingredientList.children.length)
+    return ingredientList.children.length
 }
 
 function addInstructions(recipe, li) {
@@ -52,16 +69,45 @@ function addInstructions(recipe, li) {
     });
 
     li.appendChild(instructionList)
+    console.log("instruction count", instructionList.children.length)
+    return instructionList.children.length
+
 }
 
+function addCategories(recipe, li) {
+    const categories = document.createElement("p");
+    categories.textContent = "Kategorier: "
+    categories.textContent += recipe.category.join(", ");
+    categories.classList.add("categoryDetails") 
+
+    li.appendChild(categories)
+}
+
+function addStats(recipe, li) {
+    const statsSection = document.createElement("section");
+
+    const timeSection = document.createElement("p")
+    timeSection.textContent = recipe.time + " min"
+    timeSection.classList.add("timeSection")
+
+    const difficultySection = document.createElement("p")
+    difficultySection.textContent ="Svårighetsgrad: " + recipe.difficulty +"/5"
+    difficultySection.classList.add("difficultySection")
+
+    statsSection.append(timeSection, difficultySection)
+
+    statsSection.classList.add("statsSection")
+
+    li.appendChild(statsSection)
+}
 
 function removeDetails (li) {
     const previousDetail = document.querySelector(".detailView")
     
     if (previousDetail) {
-        const detailsView = previousDetail.querySelectorAll("ul, ol")
+        const detailsView = previousDetail.querySelectorAll("ul, ol, p, section")
         detailsView.forEach(listElement => listElement.remove()) 
-        previousDetail.classList.remove("detailView")
+        previousDetail.className = "recipeCommon"
     }
      return li === previousDetail
 }
