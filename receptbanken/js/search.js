@@ -33,25 +33,7 @@ searchElement.addEventListener('input', () => {
                 recipeList.appendChild(p)
                 return;
         }
-        matches.forEach(recipe => {
-            const li = document.createElement("li")
-            li.id = "recipe" + recipe.id 
-            li.classList.add("recipeCommon")
 
-            const title = document.createElement("h2")
-            title.textContent = recipe.titel
-            
-            const img = document.createElement("img")
-            img.src = "data/img/" + recipe.imgsrc
-            img.alt = "En bild på " + recipe.titel
-            img.classList.add("recipeImg")
-            
-            li.append(img, title)
-            
-            recipeList.appendChild(li)
-        
-            return;
-    })
     matches.forEach(recipe => {
         const li = document.createElement("li")
         li.id = "recipe" + recipe.id 
