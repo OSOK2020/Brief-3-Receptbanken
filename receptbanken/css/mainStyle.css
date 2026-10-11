@@ -133,19 +133,19 @@ main {
 
 /* == Filter design === */
 
-#filter-section {
+/* #filter-section {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
+} */
 
-#categories-filter {
+/* #categories-filter {
     display: flex;
     justify-content: center;
     font-weight: bold;
     font-size: large;
     margin: 0;
-}
+} */
 
 #kategorier {
     display: flex;
@@ -246,16 +246,21 @@ main {
 }
 
 #kategorier button {
-    border: 1px solid grey;
+    border: none;
     border-radius: 8px;
-    background: #dfe1e5;
+    background: #748c66;
     padding: 4px 8px;
+    color: white;
 }
 
-#kategorier button:hover {
-    color: #4caf50;
+.filter-knapp {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+.filter-knapp:active {
+    transform: scale(0.92);
+    box-shadow: 0 0 15px rgba(255,255,255,0.4);
+}
 
 #recipe-list {
     display: grid;
