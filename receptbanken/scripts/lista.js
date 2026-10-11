@@ -51,10 +51,10 @@ export function favoriteRecipesBank (recipe, recipesArray) {
     favoriteRecipe.classList.add("faveStatus")
     //If there is no match:
     if (!recipe.favorite) {
-        favoriteRecipe.src = "/receptbanken/data/img/nonFave.png";
+        favoriteRecipe.src = imagePath + "nonFave.png";
     //If there is a match:
     } else {
-        favoriteRecipe.src = "/receptbanken/data/img/fave.png";
+        favoriteRecipe.src = imagePath + "fave.png";
     };
 
     //One click changes the attribute of the button between favorite and not favorite
@@ -62,9 +62,9 @@ export function favoriteRecipesBank (recipe, recipesArray) {
         recipe.favorite = !recipe.favorite;
 
         if (recipe.favorite){
-            favoriteRecipe.src = "/receptbanken/data/img/fave.png";
+            favoriteRecipe.src = imagePath + "fave.png";
         } else {
-            favoriteRecipe.src = "/receptbanken/data/img/nonFave.png"; 
+            favoriteRecipe.src = imagePath + "nonFave.png"; 
         };
         //Save the current version of rece
         saveFavorites(recipesArray)
