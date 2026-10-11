@@ -133,20 +133,6 @@ main {
 
 /* == Filter design === */
 
-/* #filter-section {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-} */
-
-/* #categories-filter {
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    font-size: large;
-    margin: 0;
-} */
-
 #kategorier {
     display: flex;
     justify-content: center;
@@ -155,17 +141,6 @@ main {
     border: 1px solid black;
     border-radius: 30px;
     padding: 10px 25px;
-}
-
-.filter-container button {
-    border: 1px solid grey;
-    border-radius: 8px;
-    background: #dfe1e5;
-    padding: 4px 8px;
-}
-
-.filter-container button:hover {
-    color: #4caf50;
 }
 
 /* Header */
