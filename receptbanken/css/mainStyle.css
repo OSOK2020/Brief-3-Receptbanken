@@ -138,7 +138,7 @@ main {
     justify-content: center;
     gap: 15px;
     margin-left: 10px;
-    border: 1px solid black;
+    border: 1px solid #2b3a32;
     border-radius: 30px;
     padding: 10px 25px;
 }
@@ -228,6 +228,7 @@ main {
     color: white;
 }
 
+/* KNAPP-ANIMATION */
 .filter-knapp {
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
