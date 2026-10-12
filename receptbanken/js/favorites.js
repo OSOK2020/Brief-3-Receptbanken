@@ -6,7 +6,7 @@ const isFavoritesPage =
     
 const imagePath = isFavoritesPage ? "../data/img/" : "data/img/";
 
-function favoriteList() {
+export function favoriteList() {
     const recipeList = document.getElementById("recipe-list");
 
     if (!recipeList){ return }
@@ -42,7 +42,12 @@ function favoriteList() {
     // update Favorite-page with favorite-recipes  on click on the html id=faveStatus
    recipeList.addEventListener("click", (event) => {
         if (event.target.matches(".faveStatus")) {
-            favoriteList();
+            const removeFavotie = confirm(
+                "Vill du verkligen ta bort detta recept från dina favoriter?"
+            );
+            if (removeFavotie) {
+                favoriteList();
+            }
         }
     });
 }
