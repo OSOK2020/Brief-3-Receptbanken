@@ -59,7 +59,14 @@ export function favoriteRecipesBank (recipe, recipesArray) {
 
     //One click changes the attribute of the button between favorite and not favorite
     favoriteRecipe.addEventListener("click", () => {
-        
+        if (isFavoritesPage) {
+            const confirmRemove = confirm(
+                "Vill du verkligen ta bort receptet från dina favoritmarkeringar"
+            )
+            if (!confirmRemove) {
+                return;
+            }
+        }
         recipe.favorite = !recipe.favorite;
 
         if (recipe.favorite){
