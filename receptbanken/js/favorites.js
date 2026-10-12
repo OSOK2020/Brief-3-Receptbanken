@@ -15,6 +15,8 @@ function favoriteList() {
 
     const favoriteRecipes = updateRecipes()
     .filter(recipe => recipe.favorite === true);
+
+
     favoriteRecipes.forEach((favored) => {
         const item = document.createElement("li");
         item.id = "recipe" + favored.id
@@ -37,7 +39,13 @@ function favoriteList() {
         item.append(img, title, myFavorites);
         recipeList.append(item);
     });
-
+    // update Favorite-page with favorite-recipes  on click on the html id=faveStatus
+   recipeList.addEventListener("click", (event) => {
+        if (event.target.matches(".faveStatus")) {
+            favoriteList();
+        }
+    });
 }
 
 favoriteList();
+

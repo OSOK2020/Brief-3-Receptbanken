@@ -59,6 +59,7 @@ export function favoriteRecipesBank (recipe, recipesArray) {
 
     //One click changes the attribute of the button between favorite and not favorite
     favoriteRecipe.addEventListener("click", () => {
+        
         recipe.favorite = !recipe.favorite;
 
         if (recipe.favorite){
