@@ -103,15 +103,16 @@
     left: 1rem;
 }
 
-@media (max-width: 565px) {
+@media (max-width: 900px) {
     .detailView {
         display: flex;
         flex-direction: column;
         grid-column: initial;
         grid-row: initial;
         gap: 1.5rem;
+        grid-column: span 2 ;
     }
-
+    
     .statsSection {
         order: -1;
     }
@@ -128,6 +129,15 @@
         right: unset;
         left: 2.5rem;
         top: 2.5rem;
+    }
+
+}
+
+
+@media (max-width: 565px) {
+    .detailView {
+        grid-column: initial;
+        gap: 1.5rem;
     }
 
     .detailView {
