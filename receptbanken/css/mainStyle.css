@@ -131,19 +131,6 @@ main {
     font-size: large;
 }
 
-
-/* == Filter design === */
-
-#kategorier {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-left: 10px;
-    border: 1px solid #2b3a32;
-    border-radius: 30px;
-    padding: 10px 25px;
-}
-
 /* Header */
 header {
     background-color: var(--bg-header);
@@ -207,6 +194,16 @@ main {
 
 /* == Filter design === */
 
+/* #kategorier {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 10px;
+    border: 1px solid #2b3a32;
+    border-radius: 30px;
+    padding: 10px 25px;
+} */
+
 #filter-header {
     display: flex;
     justify-content: flex-start;
@@ -219,12 +216,17 @@ main {
     font-weight: bold;
     font-size: large;
     margin: 0;
+    gap: 15px;
+    margin-left: 10px;
+    border: 1px solid #2b3a32;
+    border-radius: 30px;
+    padding: 10px 25px;
 }
 
 #kategorier button {
     border: none;
     border-radius: 8px;
-    background: #748c66;
+    background: #2b3a32;
     padding: 4px 8px;
     color: white;
 }
