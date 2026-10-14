@@ -102,3 +102,35 @@
     right: unset;
     left: 1rem;
 }
+
+@media (max-width: 565px) {
+    .detailView {
+        display: flex;
+        flex-direction: column;
+        grid-column: initial;
+        grid-row: initial;
+        gap: 1.5rem;
+    }
+
+    .statsSection {
+        order: -1;
+    }
+
+    .detailView img{
+        order:-3;
+    }
+
+    .detailView h2 {
+        order: -2;
+    }
+
+    .detailView .faveStatus {
+        right: unset;
+        left: 2.5rem;
+        top: 2.5rem;
+    }
+
+    .detailView {
+        font-size: 1.1rem;
+    }
+}
