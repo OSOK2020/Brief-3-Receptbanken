@@ -1,4 +1,4 @@
-import { updateRecipes, favoriteRecipesBank } from "../scripts/lista.js";
+import { updateRecipes, favoriteRecipesBank } from "../js/lista.js";
 
 // //Add favorites to each object
 const searchElement = document.getElementById("searchInput");

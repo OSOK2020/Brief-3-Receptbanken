@@ -24,7 +24,6 @@ function displayDetails (recipe, li) {
         li.classList.add("detailView")
         scrollTo(li)
         const isLong = addDetails(recipe, li)
-        console.log("isLong", isLong)
         if (isLong) {
             li.classList.add("detailViewLong")
         }
@@ -54,7 +53,6 @@ function addIngredient (recipe, li) {
         ingredientList.appendChild(ingredient)
     });
     li.appendChild(ingredientList)
-    console.log("ingredient count", ingredientList.children.length)
     return ingredientList.children.length
 }
 
@@ -69,7 +67,6 @@ function addInstructions(recipe, li) {
     });
 
     li.appendChild(instructionList)
-    console.log("instruction count", instructionList.children.length)
     return instructionList.children.length
 
 }

@@ -1,5 +1,5 @@
 //Favorites markings
-import { updateRecipes, favoriteRecipesBank } from "../scripts/lista.js";
+import { updateRecipes, favoriteRecipesBank } from "../js/lista.js";
 
 const isFavoritesPage =
     window.location.pathname.includes("favorites");
@@ -32,9 +32,7 @@ export function favoriteList() {
         img.classList.add("recipeImg");
         
         //Render out the favoriteRecipesBank
-        console.log(favored)
         const myFavorites = favoriteRecipesBank(favored, favoriteRecipes);
-        console.log(myFavorites)
 
         item.append(img, title, myFavorites);
         recipeList.append(item);

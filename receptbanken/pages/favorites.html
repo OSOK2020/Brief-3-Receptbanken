@@ -14,19 +14,18 @@
     <script type="module" src="../js/filter.js" defer></script>
     <script type="module" src="../js/detailView.js" defer></script>
 </head>
-</head>
 <body>
     <header>
-        <div class="logo">
+        <a href="../index.html" class="logo">
             <h1>Receptbanken</h1>
             <p>Hitta dina favoritrecept</p>
-        </div>
+        </a>
         <nav id="navigation">
             <a href="../index.html">Hem</a>
             <a href="favorites.html">Mina favoritrecept</a>
+        </nav>
     </header>
     <main>
-        <!---sök/filter kommer senare-->
         <section class="filteringSection">
             <section class="search-section">
                 <input
@@ -34,7 +33,6 @@
                     id="searchInput"
                     placeholder="Sök recept...">
             </section>
-            <!-- <section class="filter-section"> -->
             <p id="categories-filter">Kategorier</p>
             <div id="filter-header">
 
@@ -46,7 +44,6 @@
                     <button class="filter-knapp" data-kategori="sallad">Sallad</button>
                 </div>
             </div>
-            <!-- </section> -->
         </section>
         
         <!--Tom listbehållare-->

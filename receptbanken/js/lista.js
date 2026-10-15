@@ -12,7 +12,6 @@ export function updateRecipes() {
     const myFavorites =
         JSON.parse(localStorage.getItem("favorites")) || [];
 
-    console.log(myFavorites)
     return recipes.map(recipe => ({
         ...recipe,
         favorite: myFavorites.some(
@@ -20,7 +19,6 @@ export function updateRecipes() {
         )
     }));
 }
-console.log(updateRecipes())
 
 export function saveFavorites(recipesArray) {
     
@@ -32,7 +30,6 @@ export function saveFavorites(recipesArray) {
             id: recipe.id, 
             favorite: recipe.favorite
                         }));
-        console.log("Ska sparas:", favoriteRecipes)
 
         //Save them as favorites to the localStorage 
         localStorage.setItem(

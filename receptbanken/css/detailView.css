@@ -107,10 +107,9 @@
     .detailView {
         display: flex;
         flex-direction: column;
-        grid-column: initial;
         grid-row: initial;
-        gap: 1.5rem;
         grid-column: span 2 ;
+        gap: 1.5rem;
     }
     
     .statsSection {
@@ -137,10 +136,7 @@
 @media (max-width: 565px) {
     .detailView {
         grid-column: initial;
-        gap: 1.5rem;
-    }
-
-    .detailView {
+        gap: 1.5rem;        
         font-size: 1.1rem;
     }
 }
