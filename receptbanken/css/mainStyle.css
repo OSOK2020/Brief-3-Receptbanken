@@ -92,9 +92,18 @@ header nav {
     align-items: center;
 }
 
-header nav a {
+header a {
     color: var(--bg-main);
+    text-decoration: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: 300ms ease;
 }
+
+header a:hover {
+    background-color: var(--accent-secondary);
+}
+
 
 
 /* Main */
@@ -138,8 +147,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-
 }
 
 .logo * {
@@ -155,6 +162,7 @@ header nav {
 
 header nav a {
     color: var(--bg-main);
+    font-size: 1.35rem
 }
 
 
@@ -217,7 +225,7 @@ main {
     font-size: large;
     margin: 0;
     gap: 15px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     border: 1px solid #2b3a32;
     border-radius: 30px;
     padding: 10px 25px;
@@ -229,6 +237,12 @@ main {
     background: #2b3a32;
     padding: 4px 8px;
     color: white;
+
+    transition: 300ms ease;
+}
+
+#kategorier button:hover{
+    background-color: var(--accent-secondary);
 }
 
 /* KNAPP-ANIMATION */
@@ -336,6 +350,8 @@ main {
         .filteringSection {
         flex-direction: column;
         gap: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     header {
@@ -348,7 +364,8 @@ main {
         font-size: 1.5rem;
     }
 
-
+    #kategorier button {
+        padding: 4px 4px;
 }
 
 /* responsive text */
