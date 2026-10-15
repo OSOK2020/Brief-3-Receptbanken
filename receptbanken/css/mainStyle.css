@@ -366,10 +366,11 @@ main {
 
     #kategorier button {
         padding: 4px 4px;
+
+    }
 }
 
 /* responsive text */
 #recipe-list {
     font-style: clamp(0.9rem, 2cqw, 1.4rem);
 }
-
