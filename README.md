@@ -15,8 +15,11 @@
 
 ## Agil reflektion
 
-Vi använde oss av Jira för att tracka vilka uppgifter som behövde göras, vem som var ansvarig och vilket steg uppgiften var på. 
+Vi använde oss av Jira för att tracka vilka uppgifter som behövde göras, vem som var ansvarig och vilket steg uppgiften var på. Vi skapade en varsin branch som på så sätt gjorde så vi kunde arbeta parallellt.
 
+Vi prioriterade först de funktioner som var krav för att webbsidan skulle fungera som exempelvis recept, detaljvy, filtrering och favoriter med localStorage. Efter detta kunde vi fokusera på mindre förbättringar.
+
+Under projektet uppstod ett problem i git. Kod skickades upp till repot innan de senaste ändringarna hade hämtats från GitHub, vilket ledde till konflikter och vissa oönskade ändringar i projektet. Vi gick igenom koden, jämförde versionerna och korrigerade problemet. Efter detta blev vi mer noggranna med att alltit hämta de senaste ändringarna innan vi gjorde nya commits och push.
 
 - Hur delade ni upp arbetet?
 - Vad prioriterade ni i backlog?
@@ -25,7 +28,7 @@ Vi använde oss av Jira för att tracka vilka uppgifter som behövde göras, vem
 
 ## AI i projektet
 
-AI användes gör generering av recept 9-16.
+AI användes för generering av recept 9-16.
 
 
 ## Tidig skiss på layout
