@@ -21,10 +21,6 @@ Vi prioriterade först de funktioner som var krav för att webbsidan skulle fung
 
 Under projektet uppstod ett problem i git. Kod skickades upp till repot innan de senaste ändringarna hade hämtats från GitHub, vilket ledde till konflikter och vissa oönskade ändringar i projektet. Vi gick igenom koden, jämförde versionerna och korrigerade problemet. Efter detta blev vi mer noggranna med att alltit hämta de senaste ändringarna innan vi gjorde nya commits och push.
 
-- Hur delade ni upp arbetet?
-- Vad prioriterade ni i backlog?
-- En utmaning och hur ni löste den.
-
 
 ## AI i projektet
 
